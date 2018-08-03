@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+</head>
+<body>
+  <div id="wrapper">
+    <div class="column left">
+      <div id="header">
+        <p>
+          Hello, <br />
+          <span id='secondText'>let's find somewhere to eat.</span>
+        </p>
+      </div>
+      <div id="content">
+      </div>
+    </div>
+
+    <div class="column right">
+      <div id="map">
+<!--         <iframe
+        width="100%"
+        height="100%"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCJssVPDGY6ieejvtqqhJa3OUeMZ-wikFg
+          &q=Starbucks+in+Ottawa" allowfullscreen>
+        </iframe> -->
+      </div>
+    </div>
+  </div>
+</body>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_TDaYBJ2205gliFrjUgzfodV-MkLi_wM&callback=init"></script>
+<script src="main.js"></script>
+<!-- <script src="bundle.js"></script> -->
+</html>

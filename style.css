@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+html, body {
+  margin: 0px;
+  height: 100%;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+}
+#wrapper:after {
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+.left {
+  width: 70%;
+  height: 100%;
+}
+.left #header {
+  padding: 30px 15px 30px 25px;
+  margin: 0px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 28px;
+  background: -webkit-linear-gradient(#02AAB0, #00CDAC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.left #header p {
+  margin: 0px;
+}
+.left #header #secondText {
+  font-size: 18px;
+  font-weight: 600;
+}
+.left #content {
+  padding: 25px;
+  background: -webkit-linear-gradient(#02AAB0, #00CDAC);
+}
+
+.right {
+  width: 30%;
+  height: 100%;
+  background-color: gray;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.query {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.query .buttonContainer {
+  margin-top: 12px;
+}
+.query .buttonContainer input[type=radio] {
+  display: none;
+}
+.query .buttonContainer input[type=radio]:checked + .box {
+  background-color: white;
+}
+.query .buttonContainer input[type=radio]:checked + .box span {
+  color: #02AAB0;
+}
+.query .buttonContainer input[type=radio]:checked + .box span:before {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.query .buttonContainer .box {
+  width: 135px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 250ms ease;
+  will-change: transition;
+  display: inline-block;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  margin-right: 18px;
+}
+.query .buttonContainer .box:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.query .buttonContainer .box span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 11px;
+  transition: all 300ms ease;
+  font-size: 12px;
+  user-select: none;
+  color: white;
+}
+.query .buttonContainer .box span:before {
+  font-size: 1.2em;
+  font-family: FontAwesome;
+  display: block;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  font-weight: normal;
+  color: white;
+}
+.query .buttonContainer .box .tooltip {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.search {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #02AAB0;
+  background-color: white;
+  text-align: center;
+  border-radius: 100px;
+  border: none;
+  height: 40px;
+  width: 135px;
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+.search:focus {
+  outline: 0;
+}
+.search:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+a[href^="http://maps.google.com/maps"] {
+  display: none !important;
+}
+
+a[href^="https://maps.google.com/maps"] {
+  display: none !important;
+}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+  display: none;
+}
+
+.gmnoprint div {
+  background: none !important;
+}
+
+/*# sourceMappingURL=style.css.map */

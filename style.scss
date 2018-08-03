@@ -1,0 +1,171 @@
+$font: 'Open Sans', sans-serif;
+$white: rgba(255, 255, 255, 1);
+$whiteTransparent: rgba(255, 255, 255, 0.3);
+$green: #02AAB0;
+$gradient: -webkit-linear-gradient(#02AAB0, #00CDAC);
+
+@mixin gradient-text {
+    background: -webkit-linear-gradient(#02AAB0, #00CDAC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html, body{
+  margin: 0px;
+  height:100%;
+}
+
+#wrapper{
+  width: 100%;
+  height: 100%;
+  &:after {
+    display: table;
+    clear: both;
+  }
+}
+
+.column{
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+.left{
+  width: 70%;
+  height: 100%;
+  #header {
+    padding: 30px 15px 30px 25px;
+    margin: 0px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 28px;
+    @include gradient-text;
+    p{
+      margin: 0px;
+    }
+    #secondText{
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+  #content{
+    padding: 25px;
+    background: $gradient;
+  } 
+}
+
+.right{
+  width: 30%;
+  height: 100%;
+  background-color: gray;
+}
+
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.query{
+  font-family: $font;
+  color: $white;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+  .buttonContainer {
+    margin-top: 12px;
+    input[type="radio"] {
+      display: none;
+      &:checked {
+        + .box {
+          background-color: $white;
+          span {
+            color: $green;
+            &:before {
+              transform: translateY(0px);
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    .box {
+      width: 135px;
+      height: 40px;
+      background-color: $whiteTransparent;
+      transition: all 250ms ease;
+      will-change: transition;
+      display: inline-block;
+      text-align: center;
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+      font-family: $font;
+      font-weight: 400;
+      margin-right: 18px;
+      &:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+      span {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 11px;
+        transition: all 300ms ease;
+        font-size: 12px;
+        user-select: none;
+        color: $white;
+        &:before {
+          font-size: 1.2em;
+          font-family: FontAwesome;
+          display: block;
+          opacity: 0;
+          transition: all 300ms ease-in-out;
+          font-weight: normal;
+          color: white;
+        }
+      }
+      .tooltip {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+    }
+  }
+}
+
+.search {
+  font-family: $font;
+  font-weight: 600;
+  font-size: 14px;
+  color: $green;
+  background-color: $white;
+  text-align: center;
+  border-radius: 100px;
+  border: none;
+  height: 40px;
+  width: 135px;
+  cursor: pointer;
+  transition: all 250ms ease;
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}
